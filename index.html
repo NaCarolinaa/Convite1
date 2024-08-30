@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite da Carol</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Oi Luciano😊</h1>
+        <p>Quer jantar comigo?</p>
+        <img src="./img/gatos.jpg" alt="Imagem do convite">
+        <div class="buttons">
+            <a href="https://wa.me/5551981190821" class="button yes-button">Sim😊</a>
+            <button class="button no-button" onclick="moveButton()">Não</button>
+        </div>
+    </div>
+    
+    <script>
+        function moveButton() {
+            const button = document.querySelector('.no-button');
+            const randomX = Math.floor(Math.random() * 200) - 100; // Valor entre -100 e 100
+            const randomY = Math.floor(Math.random() * 200) - 100;
+            button.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        }
+    </script>
+</body>
+</html>
